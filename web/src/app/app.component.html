@@ -1,0 +1,59 @@
+
+<div class="container">
+  <h2 class="text-primary text-center">Generate An Angular Cli App</h2>
+  <br>
+    <div class="row">
+        <div class="col-sm-12">
+          <form role="form" novalidate (ngSubmit)="generateAngularCli()" >
+            <div class="row">
+              <div class="col-sm-12">
+                  <div class="form-group">
+                      <label class="form-control-label" for="#appName">Name of App</label>
+                      <input [(ngModel)]="appFields.appName" name="appName" type="text" id="appName" class="form-control">
+                    </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                  <div class="form-group">
+                    <label class="form-control-label">Skip Install NPM Packages</label>
+                    <br>
+                      <label class="form-control-label">
+                          <input [(ngModel)]="appFields.skipInstall" class="form-control" type="radio" selected value="true" name="skipInstall">Yes
+                      </label>
+                      <label class="form-control-label">
+                           <input type="radio" [(ngModel)]="appFields.skipInstall" class="form-control" value="false" checked name="optradio">No
+                      </label>
+                </div>    
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                  <div class="form-group">
+                      <button type="submit" class="text-center" id="generate-button"  class="btn btn-primary">
+                          <span>Save</span>
+                      </button>
+                  </div>
+      
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="border rounded">
+          <div class="row">
+              <div class="col-sm-12">
+                <div class="card" style="overflow-x: auto">
+                  <p><b>App Name :</b> &nbsp; {{appFields.appName}}</p>
+                  <p><b>Skip Install : </b>&nbsp; {{appFields.skipInstall}}</p>
+                  <p><b>Angular Cli Progress</b>&nbsp;</p>
+                  <div [innerHTML]="angularCliResponse.angularProgress">
+                  </div>
+                  <br>
+                  <p><b>Response :</b>&nbsp;{{angularCliResponse.responseMessage}} with name : <i> {{appFields.appName}}</i> in Directory {{angularCliResponse.directory}}</p>
+                </div>
+              </div>
+            </div>
+      </div>
+</div>

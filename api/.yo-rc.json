@@ -1,0 +1,14 @@
+{
+  "generator-astro": {
+    "name": "phlox-planet-api",
+    "apibase": "api",
+    "apiversion": "v1",
+    "version": "0.1.0",
+    "description": "Phlox Planet Api for creating API's to automate Infrastructure and application generation ",
+    "author": "SimbaLabs",
+    "last_endpoint": "angular-generator",
+    "last_apidesc": "Api for Generating Api for creating Angular App from UI",
+    "last_method": "post",
+    "last_service": "angular-generator"
+  }
+}
